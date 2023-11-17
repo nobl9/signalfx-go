@@ -2,7 +2,8 @@ package signalflow
 
 import (
 	"context"
-	"sync"
+
+	"github.com/sasha-s/go-deadlock"
 
 	"github.com/signalfx/signalfx-go/signalflow/messages"
 )

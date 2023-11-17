@@ -7,11 +7,13 @@ import (
 	"fmt"
 	"log"
 	"net/url"
-	"sync"
 	"sync/atomic"
 	"time"
 
+	"github.com/sasha-s/go-deadlock"
+
 	"github.com/gorilla/websocket"
+
 	"github.com/signalfx/signalfx-go/signalflow/messages"
 )
 

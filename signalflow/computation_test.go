@@ -2,13 +2,13 @@ package signalflow
 
 import (
 	"context"
-	"sync"
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/require"
+
 	"github.com/signalfx/signalfx-go/idtool"
 	"github.com/signalfx/signalfx-go/signalflow/messages"
-	"github.com/stretchr/testify/require"
 )
 
 func waitForDataMsg(t *testing.T, comp *Computation) (messages.Message, error) {

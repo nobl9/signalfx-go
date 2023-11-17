@@ -9,10 +9,11 @@ import (
 	"log"
 	"math"
 	"sort"
-	"sync"
 	"sync/atomic"
 	"testing"
 	"time"
+
+	"github.com/sasha-s/go-deadlock"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/signalfx/golib/v3/datapoint"

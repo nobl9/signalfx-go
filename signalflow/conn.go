@@ -6,8 +6,9 @@ import (
 	"log"
 	"net/url"
 	"path"
-	"sync"
 	"time"
+
+	"github.com/sasha-s/go-deadlock"
 
 	"github.com/gorilla/websocket"
 )

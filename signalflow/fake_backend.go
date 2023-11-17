@@ -12,10 +12,12 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"strings"
-	"sync"
 	"time"
 
+	"github.com/sasha-s/go-deadlock"
+
 	"github.com/gorilla/websocket"
+
 	"github.com/signalfx/signalfx-go/idtool"
 	"github.com/signalfx/signalfx-go/signalflow/messages"
 )
