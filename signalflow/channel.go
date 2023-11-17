@@ -9,7 +9,7 @@ import (
 
 // Channel is a queue of messages that all pertain to the same computation.
 type Channel struct {
-	sync.Mutex
+	deadlock.Mutex
 
 	name     string
 	messages chan messages.Message

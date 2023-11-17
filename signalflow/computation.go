@@ -397,7 +397,7 @@ func (c *Computation) StopWithReason(reason string) error {
 // similar to sync.Cond except the lock in internal (but accessible) and you
 // can set a timeout.
 type updateSignal struct {
-	sync.Mutex
+	deadlock.Mutex
 	s chan struct{}
 }
 

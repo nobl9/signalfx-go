@@ -28,8 +28,8 @@ type datapointTester struct {
 	Received []*datapoint.Datapoint
 	Input    chan []*datapoint.Datapoint
 
-	SendLock    sync.Mutex
-	ReceiveLock sync.Mutex
+	SendLock    deadlock.Mutex
+	ReceiveLock deadlock.Mutex
 
 	Writer *DatapointWriter
 

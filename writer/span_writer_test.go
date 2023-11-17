@@ -26,8 +26,8 @@ type traceTester struct {
 	Received []*trace.Span
 	Input    chan []*trace.Span
 
-	SendLock    sync.Mutex
-	ReceiveLock sync.Mutex
+	SendLock    deadlock.Mutex
+	ReceiveLock deadlock.Mutex
 
 	Writer *SpanWriter
 

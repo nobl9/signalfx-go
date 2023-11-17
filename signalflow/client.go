@@ -32,7 +32,7 @@ type Client struct {
 
 	ctx    context.Context
 	cancel context.CancelFunc
-	sync.Mutex
+	deadlock.Mutex
 }
 
 type clientMessageRequest struct {

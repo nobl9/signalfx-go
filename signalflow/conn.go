@@ -16,7 +16,7 @@ import (
 var ReconnectDelay = 5 * time.Second
 
 type wsConn struct {
-	sync.Mutex
+	deadlock.Mutex
 	ctx       context.Context
 	streamURL *url.URL
 

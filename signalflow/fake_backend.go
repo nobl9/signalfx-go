@@ -31,7 +31,7 @@ type tsidVal struct {
 // externally.  It supports basic messages and allows for the specification of
 // metadata and data messages that map to a particular program.
 type FakeBackend struct {
-	sync.Mutex
+	deadlock.Mutex
 
 	AccessToken   string
 	authenticated bool
